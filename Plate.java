@@ -12,4 +12,15 @@ public class Plate {
     public void setFood(int food) {
         this.food = food;
     }
+
+    public int leftFood(int appetite, int food) {
+        food -= appetite;
+        return food;
+    }
+
+    public void AddFood(int addFood){
+        if (addFood >= 0) {
+            this.food += addFood;
+        }
+    }
 }
