@@ -22,32 +22,29 @@ public class MainClass {
                     System.out.printf("%s поел и теперь сыт. \n", cat.getName());
                     plate.info();
                     break;
-                }else{
+                }
+                else{
                     System.out.printf("%s остался голодным. \n", cat.getName());
                     System.out.println("Насыпь коту корм или оставь его голодать. \n");
                     System.out.printf("1 - выберете досыпать корм \n" +
-                    "2 - оставить %s голодным", cat.getName());
+                    "2 - оставить %s голодным \n", cat.getName());
                     Scanner scan = new Scanner(System.in);
                     int choice = scan.nextInt();
-                    if (choice !=1)                
-                        break;
+                    if (choice != 1)
+                        break;            
                     else {
                         System.out.println("Выберете сколько корма вы хотите добавить в тарелку.");
-                        plate.AddFood(choice);
+                        plate.AddFood(scan.nextInt());
                         plate.info();
                     }
+              
                 }
             }
         }
         for (Cat cat : cats) {
             if (cat.getCatHunger())
-                System.out.printf("%s так и не поел и остался голодным.");
+                System.out.printf("%s так и не поел и остался голодным. \n", cat.getName());
         }
-
-        
-
-        // plate.setFood(plate.getFood() - cat1.getAppetite());
-        // System.out.printf("Кот поел и насытился. В тарелке осталось %d еды.\n", plate.info());
     }
     
 }
