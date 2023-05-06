@@ -30,9 +30,9 @@ public class Cat {
         this.catHunger = catHunger;
     }
     public boolean eat(int appetite, int food){
-        if (appetite >= food)
-            return false;
-        else
+        if (food >= appetite)
             return true;
+        else
+            return false;
     }
 }
